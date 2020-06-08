@@ -33,7 +33,13 @@ A TDD exercise.
    - 前一天：sellIn = 0 且 0<quality<50 -> 今天：sellIn -1  quality-2
    - 前一天：sellIn = 0 且 quality = 1 -> 今天：sellIn - 1，quality = 0
 
-2. Aged Brie    
+2. Aged Brie  
+    
+    - sellIn > 0 且 0<quality<50  ->  sellIn - 1, quality + 1
+    - sellIn > 0 且 quality = 50 -> sellIn - 1, quality = 50
+    - sellIn = 0 且 0<quality<50  ->  sellIn - 1, quality + 2
+    - sellIn = 0 且 quality = 49  ->  sellIn - 1, quality = 50
+    
 3. Sulfuras
 4. Backstage pass
 

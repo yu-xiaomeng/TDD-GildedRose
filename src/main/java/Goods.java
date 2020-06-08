@@ -19,15 +19,34 @@ public class Goods {
     }
 
     public void updateByDay() {
-        sellIn = sellIn - 1;
-        decreaseQuality();
+        if("Aged Brie".equals(name)){
+            decreaseSellInByOne();
+            if(sellIn <= 0){
+                increaseQualityByOne();
+            }
+            if(quality < 50){
+                increaseQualityByOne();
+            }
+        } else {
+            decreaseSellInByOne();
+            decreaseQualityByOne();
 
-        if(sellIn < 0){
-            decreaseQuality();
+            if(sellIn < 0){
+                decreaseQualityByOne();
+            }
         }
+
     }
 
-    private void decreaseQuality() {
+    private void decreaseSellInByOne() {
+        sellIn = sellIn - 1;
+    }
+
+    private void increaseQualityByOne() {
+        quality = quality + 1;
+    }
+
+    private void decreaseQualityByOne() {
         if(quality > 0){
             quality = quality -1;
         }
