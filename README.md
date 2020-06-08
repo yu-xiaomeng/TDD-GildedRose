@@ -27,6 +27,12 @@ A TDD exercise.
 ## Tasking
 
 1. regular
+
+   - 前一天：sellIn > 0 且 0<quality<50  ->  今天：sellIn -1，quality-1
+   - 前一天：sellIn > 0 且 quality = 0 -> 今天：sellIn - 1，quality = 0
+   - 前一天：sellIn = 0 且 0<quality<50 -> 今天：sellIn -1  quality-2
+   - 前一天：sellIn = 0 且 quality = 1 -> 今天：sellIn - 1，quality = 0
+
 2. Aged Brie    
 3. Sulfuras
 4. Backstage pass
