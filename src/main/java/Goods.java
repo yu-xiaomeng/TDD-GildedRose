@@ -27,6 +27,8 @@ public class Goods {
             if(quality < 50){
                 increaseQualityByOne();
             }
+        } else if ("Sulfuras".equals(name)) {
+
         } else {
             decreaseSellInByOne();
             decreaseQualityByOne();

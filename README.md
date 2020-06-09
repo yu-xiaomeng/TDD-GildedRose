@@ -41,5 +41,8 @@ A TDD exercise.
     - sellIn = 0 且 quality = 49  ->  sellIn - 1, quality = 50
     
 3. Sulfuras
+
+    - quality -> quality
+    
 4. Backstage pass
 
