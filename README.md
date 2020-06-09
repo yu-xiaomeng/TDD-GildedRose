@@ -46,3 +46,11 @@ A TDD exercise.
     
 4. Backstage pass
 
+    - sellIn > 10 and 0<quality<50 -> sellIn - 1, quality + 1
+    - sellIn > 10 and quality = 50 -> sellIn - 1, quality + 1
+    - 5 < sellIn < 10 and 0<quality<50 -> sellIn - 1, quality + 2
+    - 5 < sellIn < 10 and quality = 49 -> sellIn - 1, quality = 50
+    - 0 < sellIn < 5 and  0<quality<50 -> sellIn - 1, quality + 3
+    - 0 < sellIn < 5 and  quality = 48 -> sellIn - 1, quality = 50
+    - sellIn = 0 and 0<quality<50 -> sellIn - 1, quality = 0
+

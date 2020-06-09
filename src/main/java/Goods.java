@@ -20,24 +20,48 @@ public class Goods {
 
     public void updateByDay() {
         if("Aged Brie".equals(name)){
-            decreaseSellInByOne();
-            if(sellIn <= 0){
-                increaseQualityByOne();
-            }
-            if(quality < 50){
-                increaseQualityByOne();
-            }
+            updateAgedBrieByDay();
         } else if ("Sulfuras".equals(name)) {
 
+        } else if("Backstage Pass".equals(name)) {
+            updateBackstagePassByDay();
         } else {
-            decreaseSellInByOne();
-            decreaseQualityByOne();
-
-            if(sellIn < 0){
-                decreaseQualityByOne();
-            }
+            updateRegularByDay();
         }
 
+    }
+    private void updateBackstagePassByDay() {
+        decreaseSellInByOne();
+        increaseQualityByOne();
+        if(sellIn <= 10) {
+            increaseQualityByOne();
+        }
+        if (sellIn <= 5) {
+            increaseQualityByOne();
+        }
+        if (sellIn < 0){
+            quality = 0;
+        }
+
+    }
+
+    private void updateRegularByDay() {
+        decreaseSellInByOne();
+        decreaseQualityByOne();
+
+        if(sellIn < 0){
+            decreaseQualityByOne();
+        }
+    }
+
+    private void updateAgedBrieByDay() {
+        decreaseSellInByOne();
+        if(sellIn <= 0){
+            increaseQualityByOne();
+        }
+        if(quality < 50){
+            increaseQualityByOne();
+        }
     }
 
     private void decreaseSellInByOne() {
@@ -45,7 +69,10 @@ public class Goods {
     }
 
     private void increaseQualityByOne() {
-        quality = quality + 1;
+        if(quality < 50){
+            quality = quality + 1;
+        }
+
     }
 
     private void decreaseQualityByOne() {
